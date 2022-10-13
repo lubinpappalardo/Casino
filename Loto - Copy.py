@@ -23,7 +23,7 @@ while True:
 
     if choice == "1":
         print("Roue de la fortune\n"
-              "Nous allons générer 3 chiffres au hazard, si se sont les mêmes, vous gagnez 100 points.\n"
+              "Nous allons générer 3 chiffres au hazard, si se sont les mêmes, vous gagnez 1000 points.\n"
               "Prix de jeux : 5 points")
         fchoice1 = input("Voulez jouer ? ")
         if fchoice1 == "oui":
@@ -40,7 +40,10 @@ while True:
             time.sleep(0.7)
             if num1 == num2 == num3:
                 print("Vous avez gagné !")
-                pts += 105
+                pts += 1005
+            if num2 == num1 + 1 & num3 == num2 + 1:
+                print("Vous avez gagné le secret jackpot !")
+                pts += 2005
             else:
                 print("Perdu !")
             time.sleep(2)
@@ -48,7 +51,7 @@ while True:
     if choice == "2":
         print("Mise en jeu extreme\n"
               "Misez ce que vous voulez, soit vous gagnez le double,\n"
-              "soit perdez le double.")
+              "soit vous perdez le double.")
         fchoice2 = input("Voulez vous jouer ? ")
         if fchoice2 == "oui":
             smej = int(input("Quelle somme voulez-vous miser ? "))
@@ -67,7 +70,7 @@ while True:
     if choice == "3":
         print("Pariez sur le bon nombre !\n"
               "Un nombre entre 1 et 5 est genere,\n"
-              "devinez lequel pour gagner 50 points !\n"
+              "devinez lequel pour gagner 100 points !\n"
               "Prix du jeux : 10 points")
         fchoice3 = input("Voulez vous jouer ? ")
         if fchoice3 == "oui":
@@ -76,7 +79,7 @@ while True:
             print(result3)
             time.sleep(0.5)
             if result3 == nbet:
-                pts += 50
+                pts += 100
                 print("Vous avez gagné !")
             else:
                 pts -= 10
